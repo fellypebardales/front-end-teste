@@ -1,0 +1,138 @@
+
+
+.main__titulo {
+    position: absolute;
+    top: 100px;
+    width: 70%;
+    height: 30px;
+    text-align: end;
+    color: #fff;
+}
+
+.main__titulo--padrao {
+    font-size: 80px;
+}
+
+span {
+    font-size: 120px;
+    font-weight: 700;
+    display: block;
+}
+
+.main__titulo--sub {
+    margin-left: 150px;
+    font-size: 16px;
+}
+
+.container__corpo--box {
+    width: 100%;
+    height: 505px;
+    padding: 0 300px;
+    background-color: #f3270a;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.vertical-descricao {
+    background-color: #000000;
+    opacity: 0.200;
+    width: 6px;
+    height: 74px;
+    float: left;
+    margin-right: 10px;
+}
+
+.descricao__titulo--unidade {
+    width: 274px;
+    height: 78px;
+    font-size: 40px;
+    line-height: 36px;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.descricao-texto {
+    width: 282px;
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+    font-weight: 400;
+    margin: 20px 0;
+    height: 130px;
+}
+
+.descricao-botao {
+    width: 209px;
+    height: 52px;
+    border-radius: 13px;
+    background-color: transparent;
+    border-color: #ffffff;
+    transition: transform .3s ease;
+}
+
+.descricao-botao:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.2);
+    background-color: #951b1b;
+}
+
+.descricao__botao--link {
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: 900;
+    text-align: right;
+}
+
+.fundo {
+    background-image: url(/img/fundo.png);
+    background-position-y: -20px;
+    width: 100%;
+    height: 500px;
+    background-repeat: repeat-x;
+}
+
+@media screen and (max-width: 1550px) {
+
+    .main__titulo--padrao {
+        font-size: 60px;
+    }
+    
+    span {
+        font-size: 80px;
+    }
+    
+    .main__titulo--sub {
+        font-size: 14px;
+    }
+
+    .container__corpo--box {
+        height: 80vh;
+        padding: 0 100px;
+        justify-content: center;
+    }
+
+    .box__item {
+        margin: 0 40px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #carouselExampleControls {
+        display: none;
+    }
+
+    .banner-mobile {
+        width: 100vw;
+        height: 100vh;
+        background-image: url(/img/banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container__corpo--box {
+        min-height: 1400px;
+    }
+}
