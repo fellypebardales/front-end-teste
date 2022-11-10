@@ -1,0 +1,155 @@
+.body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+li a {
+    color: #fff;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+    color: #fff;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.menu-mobile {
+    display: none;
+    cursor: pointer;
+}
+
+.cabecalho__nav--lista {
+    list-style: none;
+    display: flex;
+}
+
+.cabecalho__nav--lista li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+    font-size: 12px;
+    transition: transform .3s ease;
+}
+
+.cabecalho__nav--lista li:hover {
+    background-color: rgba(32, 32, 31, 0.423);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.container__principal {
+    z-index: 2;
+}
+
+.icone-menu-mobile {
+    color: #fff;
+}
+
+.nav__pesquisa {
+    display: flex;
+    align-items: center;
+}
+
+.nav__input--barra {
+    width: 169px;
+    height: 30px;
+    opacity: 0.7;
+    border: 0;
+    padding: 0.5rem;
+    border-radius: 0.3rem 0 0 0.3rem;
+}
+
+.nav__input--botao {
+    width: 30px;
+    height: 32px;
+    background-color: #f3270a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+@media screen and (max-width: 1190px) {
+    .nav__logo {
+        width: 150px;
+    }
+
+    .cabecalho__nav--lista li{
+        margin-left: 16px;
+        font-size: 10px;
+    }
+
+    .nav__input--barra {
+        width: 150px;
+        height: 25px;
+    }
+    
+    .nav__input--botao {
+        width: 25px;
+        height: 27px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #nav {
+        background-color: #555555;
+        height: 80px;
+        padding: 0 20px;
+    }
+
+    .cabecalho__nav--lista {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background-color: #30303091;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .cabecalho__nav--lista li {
+        margin-left: 0;
+    }
+
+    .seta {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .nav__pesquisa {
+        display: none;
+    }
+}
+
+.cabecalho__nav--lista.active {
+    transform: translateX(0);
+}
